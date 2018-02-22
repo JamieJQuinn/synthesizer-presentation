@@ -8,20 +8,20 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="http://lab.hakim.se/reveal-js/css/reveal.css">
   <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+  <link rel="stylesheet" href="http://lab.hakim.se/reveal-js/css/theme/beige.css" id="theme">
   <link rel="stylesheet" href="changes.css"/>
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'http://lab.hakim.se/reveal-js/css/print/pdf.css' : 'http://lab.hakim.se/reveal-js/css/print/paper.css';
     document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
   <!--[if lt IE 9]>
-  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <script src="http://lab.hakim.se/reveal-js/lib/js/html5shiv.js"></script>
   <![endif]-->
 </head>
 <body>
@@ -36,17 +36,8 @@
 <section><section id="what-is-synthesis" class="titleslide slide level1"><h1>What is Synthesis?</h1></section><section id="section" class="slide level2">
 <h2></h2>
 <blockquote>
-<p>The artificial production of sound</p>
+<p>The artificial (electronic) production of sound</p>
 </blockquote>
-</section><section id="types-of-synthesis" class="slide level2">
-<h2>Types of Synthesis</h2>
-<ul>
-<li class="fragment">Additive</li>
-<li class="fragment">Subtractive</li>
-<li class="fragment">Frequency modulated</li>
-<li class="fragment">Sample based</li>
-<li class="fragment">Physically Based</li>
-</ul>
 </section></section>
 <section><section id="what-is-sound" class="titleslide slide level1"><h1>What is Sound?</h1></section><section id="to-the-physicist" class="slide level2">
 <h2>To the Physicist</h2>
@@ -67,23 +58,110 @@
 <p>Sound is the reception of such waves and their perception by the brain</p>
 </blockquote>
 </section></section>
-<section><section id="section-2" class="titleslide slide level1"><h1></h1></section><section id="the-elements-of-synthesis" class="slide level2">
-<h2>The Elements of Synthesis</h2>
-<ol type="1">
-<li class="fragment">Pitch</li>
+<section><section id="the-three-components-of-synthesised-sound" class="titleslide slide level1"><h1>The Three Components of Synthesised Sound</h1></section><section id="pitch" class="slide level2">
+<h2>Pitch</h2>
+<figure>
+<img src="./Sine_waves_different_frequencies.svg" />
+</figure>
+<p><a href="https://commons.wikimedia.org/wiki/File:Sine_waves_different_frequencies.svg" class="uri">https://commons.wikimedia.org/wiki/File:Sine_waves_different_frequencies.svg</a></p>
+</section><section id="timbre" class="slide level2">
+<h2>Timbre</h2>
+<figure>
+<img src="./timbre.svg" />
+</figure>
+<div class="fragment">
+<figure>
+<img src="./fourier.png" />
+</figure>
+</div>
+</section><section id="volume" class="slide level2">
+<h2>Volume</h2>
+<figure>
+<img src="./ADSR.jpg" />
+</figure>
+</section></section>
+<section><section id="types-of-synthesis" class="titleslide slide level1"><h1>Types of Synthesis</h1></section></section>
+<section><section id="physically-based" class="titleslide slide level1"><h1>Physically Based</h1></section><section id="section-2" class="slide level2">
+<h2></h2>
+<p>Using mathematical models to emulate a sound, such as a bowed instrument</p>
+<video class="stretch" data-autoplay loop src="./5_glissando.mp4">
+</video>
+<p><a href="http://www.ness.music.ed.ac.uk/" class="uri">http://www.ness.music.ed.ac.uk/</a></p>
+<div class="fragment">
+<audio data-autoplay src="./5_glissando.mp3">
+</audio>
+</div>
+</section><section id="section-3" class="slide level2">
+<h2></h2>
+<p>Or a gong using a linear model</p>
+<div class="fragment">
+<audio data-autoplay src="./shellcurved_linear.mp4">
+</audio>
+</div>
+</section><section id="section-4" class="slide level2">
+<h2></h2>
+<p>and a nonlinear model</p>
+<div class="fragment">
+<audio data-autoplay src="./shellcurved_nonlinear.mp4">
+</audio>
+</div>
+</section></section>
+<section><section id="sample-based" class="titleslide slide level1"><h1>Sample Based</h1></section><section id="section-5" class="slide level2" data-background-iframe="https://www.youtube-nocookie.com/embed/U21TOJ-fpCU?rel=0">
+<h2></h2>
+</section></section>
+<section><section id="additive" class="titleslide slide level1"><h1>Additive</h1></section><section id="section-6" class="slide level2">
+<h2></h2>
+<p><a href="http://www.ams.org/publicoutreach/feature-column/fcarc-synthesizer" class="uri">http://www.ams.org/publicoutreach/feature-column/fcarc-synthesizer</a></p>
+<figure>
+<img src="./fcarc-march2009-gstring.gif" />
+</figure>
+<div class="fragment">
+<audio data-autoplay src="./GString.mp3">
+</audio>
+</div>
+<div class="fragment">
+<figure>
+<img src="./fcarc-march2009-guitarspectrum.gif" />
+</figure>
+</div>
+<div class="fragment">
+<audio data-autoplay src="./gstring.fourier.mp3">
+</audio>
+</div>
+</section></section>
+<section><section id="frequency-modulated" class="titleslide slide level1"><h1>Frequency Modulated</h1></section><section id="subtractive" class="slide level2">
+<h2>Subtractive</h2>
+<p>What I'll use today, expansion later</p>
+</section></section>
+<section><section id="the-elements-of-synthesis" class="titleslide slide level1"><h1>The Elements of Synthesis</h1></section><section id="pitch-1" class="slide level2">
+<h2>Pitch</h2>
+<ol start="2" type="1">
 <li class="fragment">Timbre</li>
 <li class="fragment">Volume</li>
 </ol>
 </section><section id="todo-analysis-of-acoustic-sound-ito-these-parts" class="slide level2">
 <h2>Todo: analysis of acoustic sound ITO these parts</h2>
-</section><section id="section-3" class="slide level2">
-<h2></h2>
 </section></section>
+<section><section id="subtractive-synthesis" class="titleslide slide level1"><h1>Subtractive Synthesis</h1></section><section id="start-with-harmonically-complex-wave-what-does-that-mean" class="slide level2">
+<h2>Start with harmonically complex wave (what does that mean?)</h2>
+<p>Perfrom Fourier Transform of square wave?</p>
+<p>Audio of rich (square) vs simple (sine)</p>
+</section><section id="add-filters-to-reduce-number-of-harmonics" class="slide level2">
+<h2>Add filters to reduce number of harmonics</h2>
+<p>intro to filters filter analysis of low pass</p>
+<p>comb filter</p>
+<p>all with Audio</p>
+</section><section id="asdr" class="slide level2">
+<h2>ASDR</h2>
+<p>Not too much to talk about, simply modifying volume</p>
+</section></section>
+<section><section id="example-on-microkorg" class="titleslide slide level1"><h1>Example on Microkorg</h1></section></section>
+<section><section id="conclusion" class="titleslide slide level1"><h1>Conclusion</h1></section></section>
     </div>
   </div>
 
-  <script src="reveal.js/lib/js/head.min.js"></script>
-  <script src="reveal.js/js/reveal.js"></script>
+  <script src="http://lab.hakim.se/reveal-js/lib/js/head.min.js"></script>
+  <script src="http://lab.hakim.se/reveal-js/js/reveal.js"></script>
 
   <script>
 
@@ -97,9 +175,9 @@
 
         // Optional reveal.js plugins
         dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+          { src: 'http://lab.hakim.se/reveal-js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'http://lab.hakim.se/reveal-js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'http://lab.hakim.se/reveal-js/plugin/notes/notes.js', async: true }
         ]
       });
     </script>
