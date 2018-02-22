@@ -31,6 +31,15 @@
 
 ![](./timbre.svg)
 
+
+## Analysing Timbre
+
+$$g(t) = a_0/2 + \sum^{\infty}_{n=1} a_n \cos(2n\pi f t) + \sum^{\infty}_{n=1} b_n \sin(2n\pi f t)$$
+
+. . .
+
+$$g(t) = \sin(2 \cdot 5\pi t) + \frac{1}{2} \sin(2 \cdot 14\pi t)$$
+
 . . .
 
 ![](./fourier.png)
@@ -40,6 +49,8 @@
 ![](./ADSR.jpg)
 
 # Types of Synthesis
+
+## 
 
 - Physically Based
 - Additive
@@ -103,20 +114,62 @@ and a nonlinear model
 
 # Frequency Modulated
 
-Basics of this, multiplying sin waves
+##
 
-## Subtractive
+![](./fcarc-march2009-fmspectrum.0.gif)
+<audio data-autoplay src="./fmspectrum.0.mp3"></audio>
 
-What I'll use today, expansion later
+##
 
+![](./fcarc-march2009-fmspectrum.1.gif)
+<audio data-autoplay src="./fmspectrum.1.mp3"></audio>
 
-# The Elements of Synthesis
+##
 
-## Pitch
-2. Timbre
-3. Volume
+![](./fcarc-march2009-fmspectrum.2.gif)
+<audio data-autoplay src="./fmspectrum.2.mp3"></audio>
 
-## Todo: analysis of acoustic sound ITO these parts
+##
+
+![](./fcarc-march2009-fmspectrum.3.gif)
+<audio data-autoplay src="./fmspectrum.3.mp3"></audio>
+
+##
+
+![](./fcarc-march2009-fmspectrum.4.gif)
+<audio data-autoplay src="./fmspectrum.4.mp3"></audio>
+
+##
+
+![](./fcarc-march2009-fmspectrum.5.gif)
+<audio data-autoplay src="./fmspectrum.5.mp3"></audio>
+
+## Negative Frequencies?
+
+. . .
+
+![](./fcarc-march2009-sidebands.0.gif)
+
+. . .
+
+![](./fcarc-march2009-sidebands.1.gif)\ ![](./fcarc-march2009-sidebands.2.gif)
+
+## Famous Examples - Yamaha DX7
+
+##
+
+![](./a-ha.jpg){.style width=300}
+<audio data-autoplay src="./Take_On_Me.mp3"></audio>
+
+##
+
+![](./dirty_dancing.jpg){.style width=300}
+<audio data-autoplay src="./Hungry_Eyes.mp3"></audio>
+
+##
+
+![](./dead_or_alive.jpg){.style width=300}
+<audio data-autoplay src="./You_Spin_Me_Round.mp3"></audio>
 
 # Subtractive Synthesis
 

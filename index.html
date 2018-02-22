@@ -23,6 +23,13 @@
   <!--[if lt IE 9]>
   <script src="http://lab.hakim.se/reveal-js/lib/js/html5shiv.js"></script>
   <![endif]-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css" /><script type="text/javascript">window.onload = function(){var mathElements = document.getElementsByClassName("math");
+  for (var i=0; i < mathElements.length; i++)
+  {
+   var texText = mathElements[i].firstChild
+   katex.render(texText.data, mathElements[i])
+  }}
+  </script>
 </head>
 <body>
   <div class="reveal">
@@ -69,6 +76,12 @@
 <figure>
 <img src="./timbre.svg" />
 </figure>
+</section><section id="analysing-timbre" class="slide level2">
+<h2>Analysing Timbre</h2>
+<p><span class="math display">\displaystyle g(t) = a_0/2 + \sum^{\infty}_{n=1} a_n \cos(2n\pi f t) + \sum^{\infty}_{n=1} b_n \sin(2n\pi f t)</span></p>
+<div class="fragment">
+<p><span class="math display">\displaystyle g(t) = \sin(2 \cdot 5\pi t) + \frac{1}{2} \sin(2 \cdot 14\pi t)</span></p>
+</div>
 <div class="fragment">
 <figure>
 <img src="./fourier.png" />
@@ -80,8 +93,17 @@
 <img src="./ADSR.jpg" />
 </figure>
 </section></section>
-<section><section id="types-of-synthesis" class="titleslide slide level1"><h1>Types of Synthesis</h1></section></section>
-<section><section id="physically-based" class="titleslide slide level1"><h1>Physically Based</h1></section><section id="section-2" class="slide level2">
+<section><section id="types-of-synthesis" class="titleslide slide level1"><h1>Types of Synthesis</h1></section><section id="section-2" class="slide level2">
+<h2></h2>
+<ul>
+<li class="fragment">Physically Based</li>
+<li class="fragment">Additive</li>
+<li class="fragment">Subtractive</li>
+<li class="fragment">Frequency modulated</li>
+<li class="fragment">Sample based</li>
+</ul>
+</section></section>
+<section><section id="physically-based" class="titleslide slide level1"><h1>Physically Based</h1></section><section id="section-3" class="slide level2">
 <h2></h2>
 <p>Using mathematical models to emulate a sound, such as a bowed instrument</p>
 <video class="stretch" data-autoplay loop src="./5_glissando.mp4">
@@ -91,14 +113,14 @@
 <audio data-autoplay src="./5_glissando.mp3">
 </audio>
 </div>
-</section><section id="section-3" class="slide level2">
+</section><section id="section-4" class="slide level2">
 <h2></h2>
 <p>Or a gong using a linear model</p>
 <div class="fragment">
 <audio data-autoplay src="./shellcurved_linear.mp4">
 </audio>
 </div>
-</section><section id="section-4" class="slide level2">
+</section><section id="section-5" class="slide level2">
 <h2></h2>
 <p>and a nonlinear model</p>
 <div class="fragment">
@@ -106,10 +128,10 @@
 </audio>
 </div>
 </section></section>
-<section><section id="sample-based" class="titleslide slide level1"><h1>Sample Based</h1></section><section id="section-5" class="slide level2" data-background-iframe="https://www.youtube-nocookie.com/embed/U21TOJ-fpCU?rel=0">
+<section><section id="sample-based" class="titleslide slide level1"><h1>Sample Based</h1></section><section id="section-6" class="slide level2" data-background-iframe="https://www.youtube-nocookie.com/embed/U21TOJ-fpCU?rel=0">
 <h2></h2>
 </section></section>
-<section><section id="additive" class="titleslide slide level1"><h1>Additive</h1></section><section id="section-6" class="slide level2">
+<section><section id="additive" class="titleslide slide level1"><h1>Additive</h1></section><section id="section-7" class="slide level2">
 <h2></h2>
 <p><a href="http://www.ams.org/publicoutreach/feature-column/fcarc-synthesizer" class="uri">http://www.ams.org/publicoutreach/feature-column/fcarc-synthesizer</a></p>
 <figure>
@@ -129,18 +151,45 @@
 </audio>
 </div>
 </section></section>
-<section><section id="frequency-modulated" class="titleslide slide level1"><h1>Frequency Modulated</h1></section><section id="subtractive" class="slide level2">
-<h2>Subtractive</h2>
-<p>What I'll use today, expansion later</p>
-</section></section>
-<section><section id="the-elements-of-synthesis" class="titleslide slide level1"><h1>The Elements of Synthesis</h1></section><section id="pitch-1" class="slide level2">
-<h2>Pitch</h2>
-<ol start="2" type="1">
-<li class="fragment">Timbre</li>
-<li class="fragment">Volume</li>
-</ol>
-</section><section id="todo-analysis-of-acoustic-sound-ito-these-parts" class="slide level2">
-<h2>Todo: analysis of acoustic sound ITO these parts</h2>
+<section><section id="frequency-modulated" class="titleslide slide level1"><h1>Frequency Modulated</h1></section><section id="section-8" class="slide level2">
+<h2></h2>
+<p><img src="./fcarc-march2009-fmspectrum.0.gif" /> <audio data-autoplay src="./fmspectrum.0.mp3"></audio></p>
+</section><section id="section-9" class="slide level2">
+<h2></h2>
+<p><img src="./fcarc-march2009-fmspectrum.1.gif" /> <audio data-autoplay src="./fmspectrum.1.mp3"></audio></p>
+</section><section id="section-10" class="slide level2">
+<h2></h2>
+<p><img src="./fcarc-march2009-fmspectrum.2.gif" /> <audio data-autoplay src="./fmspectrum.2.mp3"></audio></p>
+</section><section id="section-11" class="slide level2">
+<h2></h2>
+<p><img src="./fcarc-march2009-fmspectrum.3.gif" /> <audio data-autoplay src="./fmspectrum.3.mp3"></audio></p>
+</section><section id="section-12" class="slide level2">
+<h2></h2>
+<p><img src="./fcarc-march2009-fmspectrum.4.gif" /> <audio data-autoplay src="./fmspectrum.4.mp3"></audio></p>
+</section><section id="section-13" class="slide level2">
+<h2></h2>
+<p><img src="./fcarc-march2009-fmspectrum.5.gif" /> <audio data-autoplay src="./fmspectrum.5.mp3"></audio></p>
+</section><section id="negative-frequencies" class="slide level2">
+<h2>Negative Frequencies?</h2>
+<div class="fragment">
+<figure>
+<img src="./fcarc-march2009-sidebands.0.gif" />
+</figure>
+</div>
+<div class="fragment">
+<p><img src="./fcarc-march2009-sidebands.1.gif" /> <img src="./fcarc-march2009-sidebands.2.gif" /></p>
+</div>
+</section><section id="famous-examples---yamaha-dx7" class="slide level2">
+<h2>Famous Examples - Yamaha DX7</h2>
+</section><section id="section-14" class="slide level2">
+<h2></h2>
+<p><img src="./a-ha.jpg" class="style" width="300" /> <audio data-autoplay src="./Take_On_Me.mp3"></audio></p>
+</section><section id="section-15" class="slide level2">
+<h2></h2>
+<p><img src="./dirty_dancing.jpg" class="style" width="300" /> <audio data-autoplay src="./Hungry_Eyes.mp3"></audio></p>
+</section><section id="section-16" class="slide level2">
+<h2></h2>
+<p><img src="./dead_or_alive.jpg" class="style" width="300" /> <audio data-autoplay src="./You_Spin_Me_Round.mp3"></audio></p>
 </section></section>
 <section><section id="subtractive-synthesis" class="titleslide slide level1"><h1>Subtractive Synthesis</h1></section><section id="start-with-harmonically-complex-wave-what-does-that-mean" class="slide level2">
 <h2>Start with harmonically complex wave (what does that mean?)</h2>
