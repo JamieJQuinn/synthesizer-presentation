@@ -2,7 +2,7 @@
 #include "filters.hpp"
 
 unsigned char lowPass(int wf, unsigned char prev) {
-  float cutoff = 15000.0/SAMPLE_RATE;
+  float cutoff = 5000.0/SAMPLE_RATE;
   return prev + (wf - prev)*cutoff;
 }
 

@@ -3,7 +3,7 @@
 #include "waves.hpp"
 
 float bsin(int t) {
-  return sin(2*M_PI*(float)t/SAMPLE_RATE) + 0.5f;
+  return 0.5*sin(2*M_PI*(float)t/SAMPLE_RATE) + 0.5f;
 }
 
 float saw(int t) {

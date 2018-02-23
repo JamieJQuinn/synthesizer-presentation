@@ -191,20 +191,74 @@
 <h2></h2>
 <p><img src="./dead_or_alive.jpg" class="style" width="300" /> <audio data-autoplay src="./You_Spin_Me_Round.mp3"></audio></p>
 </section></section>
-<section><section id="subtractive-synthesis" class="titleslide slide level1"><h1>Subtractive Synthesis</h1></section><section id="start-with-harmonically-complex-wave-what-does-that-mean" class="slide level2">
-<h2>Start with harmonically complex wave (what does that mean?)</h2>
-<p>Perfrom Fourier Transform of square wave?</p>
-<p>Audio of rich (square) vs simple (sine)</p>
-</section><section id="add-filters-to-reduce-number-of-harmonics" class="slide level2">
-<h2>Add filters to reduce number of harmonics</h2>
-<p>intro to filters filter analysis of low pass</p>
-<p>comb filter</p>
-<p>all with Audio</p>
+<section><section id="subtractive-synthesis" class="titleslide slide level1"><h1>Subtractive Synthesis</h1></section><section id="section-17" class="slide level2">
+<h2></h2>
+<ul>
+<li class="fragment">Oscillate harmonically rich wave - Pitch</li>
+<li class="fragment">Filter - Timbre</li>
+<li class="fragment">ASDR envelopes - Volume</li>
+</ul>
+</section><section id="the-oscillator" class="slide level2">
+<h2>The Oscillator</h2>
+<figure>
+<img src="./sin_fourier.png" />
+</figure>
+<div class="fragment">
+<audio data-autoplay src="./sine.mp3">
+</audio>
+</div>
+</section><section id="the-oscillator-1" class="slide level2">
+<h2>The Oscillator</h2>
+<figure>
+<img src="./sawtooth_fourier.png" />
+</figure>
+<div class="fragment">
+<audio data-autoplay src="./saw.mp3">
+</audio>
+</div>
+</section><section id="the-oscillator-2" class="slide level2">
+<h2>The Oscillator</h2>
+<figure>
+<img src="./square_fourier.png" />
+</figure>
+<div class="fragment">
+<audio data-autoplay src="./square.mp3">
+</audio>
+</div>
+</section><section id="the-filter" class="slide level2">
+<h2>The Filter</h2>
+<blockquote>
+<p>Allowing certain frequencies to be heard while damping others to produce timbre</p>
+</blockquote>
+</section><section id="the-low-pass-filter" class="slide level2">
+<h2>The Low Pass Filter</h2>
+<figure>
+<img src="./ideal_lowpass.png" />
+</figure>
+</section><section id="the-simplest-low-pass-filter" class="slide level2">
+<h2>The Simplest Low Pass Filter</h2>
+<p><span class="math display">\displaystyle y_n = x_n + x_{n-1}</span></p>
+<div class="fragment">
+<figure>
+<img src="./low_pass_applied.png" />
+</figure>
+</div>
+</section><section id="frequency-response" class="slide level2">
+<h2>Frequency Response</h2>
+<figure>
+<img src="./freq_response_low_pass.png" />
+</figure>
+</section><section id="frequency-response-1" class="slide level2">
+<h2>Frequency Response</h2>
+<figure>
+<img src="./freq_response_low_pass_analytical.png" />
+</figure>
 </section><section id="asdr" class="slide level2">
 <h2>ASDR</h2>
-<p>Not too much to talk about, simply modifying volume</p>
+<figure>
+<img src="./ADSR.jpg" />
+</figure>
 </section></section>
-<section><section id="example-on-microkorg" class="titleslide slide level1"><h1>Example on Microkorg</h1></section></section>
 <section><section id="conclusion" class="titleslide slide level1"><h1>Conclusion</h1></section></section>
     </div>
   </div>

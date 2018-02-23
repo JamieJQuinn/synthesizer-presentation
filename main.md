@@ -173,31 +173,62 @@ and a nonlinear model
 
 # Subtractive Synthesis
 
+## 
+
 - Oscillate harmonically rich wave - Pitch
 - Filter - Timbre
 - ASDR envelopes - Volume
 
-- LFO - Variations on above
+## The Oscillator
 
-## Start with harmonically complex wave (what does that mean?)
+![](./sin_fourier.png)
 
-Perfrom Fourier Transform of square wave?
+. . .
 
-Audio of rich (square) vs simple (sine)
+<audio data-autoplay src="./sine.mp3"></audio>
 
-## Add filters to reduce number of harmonics
+## The Oscillator
 
-intro to filters
-filter analysis of low pass
+![](./sawtooth_fourier.png)
 
-comb filter
+. . .
 
-all with Audio
+<audio data-autoplay src="./saw.mp3"></audio>
+
+## The Oscillator
+
+![](./square_fourier.png)
+
+. . .
+
+<audio data-autoplay src="./square.mp3"></audio>
+
+## The Filter
+
+> Allowing certain frequencies to be heard while damping others to produce timbre
+
+## The Low Pass Filter
+
+![](./ideal_lowpass.png)
+
+## The Simplest Low Pass Filter
+
+$$y_n = x_n + x_{n-1}$$
+
+. . .
+
+![](./low_pass_applied.png)
+
+## Frequency Response
+
+![](./freq_response_low_pass.png)
+
+## Frequency Response
+
+![](./freq_response_low_pass_analytical.png)
 
 ## ASDR
 
-Not too much to talk about, simply modifying volume
-
-# Example on Microkorg
+![](./ADSR.jpg)
 
 # Conclusion

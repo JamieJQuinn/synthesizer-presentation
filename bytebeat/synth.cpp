@@ -1,38 +1,52 @@
 #include <iostream>
 #include <math.h>
+#include <SFML/Graphics.hpp>
 #include "waves.hpp"
 #include "sample_rate.hpp"
 #include "filters.hpp"
 #include "utility.hpp"
 
+const int WIDTH=800;
+const int HEIGHT=600;
+float freq = 440;
+const int DRAW_RATE = 10;
+const int DRAW_SAMPLE_STEPS = SAMPLE_RATE/DRAW_RATE;
+const int DRAW_SAMPLES = DRAW_SAMPLE_STEPS/6;
+
 float fmWaveform(int t) {
   float tSec = float(t)/SAMPLE_RATE;
-  float fmFreq = 440;
-  //float fmFreq = tSec/10.*220.0;
-  float cFreq = 440;
+  float fmFreq = 5;
+  //float fmFreq = tSec/10.*220;
+  float cFreq = freq;
   //float I = tSec/10.*5.;
   float I = 1;
-  return sin(2*M_PI*cFreq*tSec + I*sin(2*M_PI*fmFreq*tSec)) + 0.5f;
+  return 0.5*sin(2*M_PI*cFreq*tSec + I*sin(2*M_PI*fmFreq*tSec)) + 0.5f;
 }
 
 float waveform(int t) {
-  return square(440*t);
+  return bsin(freq*t);
+}
+
+void drawWaveform(unsigned char samples[], sf::RenderWindow& window) {
+  window.clear();
+  sf::VertexArray line(sf::LineStrip, DRAW_SAMPLES);
+  for(int i=0; i<DRAW_SAMPLES; ++i) {
+    float xPos = float(i)/DRAW_SAMPLES*WIDTH;
+    line[i].position = sf::Vector2f(xPos, uint(samples[i]) + HEIGHT/2 - 128);
+  }
+  window.draw(line);
+  window.display();
 }
 
 int main() {
+  sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "C++ Synth");
+  unsigned char samples [DRAW_SAMPLES];
   unsigned char prev = charFromWF(waveform(0));
   for(int t=0;;++t) {
     // Low Pass
-    //unsigned char wf = charFromWF(waveform(t));
-    //unsigned char current = lowPass(wf, prev);
-    //std::cout << current;
-    //prev = current;
-
-    // High Pass
-    //unsigned char wf = charFromWF(waveform(t));
-    //unsigned char current = lowPass(wf, prev);
-    //wf = highPass(wf, prev);
-    //prev = current;
+    //unsigned char wf = charFromWF(fmWaveform(t));
+    //wf = lowPass(wf, prev);
+    //prev = wf;
 
     // Thru
     //unsigned char wf = charFromWF(waveform(t));
@@ -41,5 +55,11 @@ int main() {
     unsigned char wf = charFromWF(fmWaveform(t));
 
     std::cout << wf;
+
+    // Drawing Code
+    if(t%DRAW_SAMPLE_STEPS == 0) {
+      drawWaveform(samples, window);
+    }
+    samples[t%DRAW_SAMPLES] = wf;
   }
 }
