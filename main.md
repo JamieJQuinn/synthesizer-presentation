@@ -219,13 +219,21 @@ $$y_n = x_n + x_{n-1}$$
 
 ![](./low_pass_applied.png)
 
-## Frequency Response
+## Frequency Response - Numerical
 
 ![](./freq_response_low_pass.png)
 
-## Frequency Response
+## Frequency Response - Analytical
 
 ![](./freq_response_low_pass_analytical.png)
+
+## Moving Average Low Pass Filter
+
+$$y_n = f_cx_n + (1-f_c)y_{n-1}$$
+
+## Frequency Response - Moving Average
+
+![](./freq_response_low_pass_recursive_analytical.png)
 
 ## ASDR
 

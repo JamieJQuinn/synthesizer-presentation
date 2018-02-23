@@ -24,7 +24,7 @@ float fmWaveform(int t) {
 }
 
 float waveform(int t) {
-  return bsin(freq*t);
+  return saw(freq*t);
 }
 
 void drawWaveform(unsigned char samples[], sf::RenderWindow& window) {
@@ -44,15 +44,15 @@ int main() {
   unsigned char prev = charFromWF(waveform(0));
   for(int t=0;;++t) {
     // Low Pass
-    //unsigned char wf = charFromWF(fmWaveform(t));
-    //wf = lowPass(wf, prev);
-    //prev = wf;
+    unsigned char wf = charFromWF(waveform(t));
+    wf = lowPass(wf, prev);
+    prev = wf;
 
     // Thru
     //unsigned char wf = charFromWF(waveform(t));
 
     // Frequency Modulated
-    unsigned char wf = charFromWF(fmWaveform(t));
+    //unsigned char wf = charFromWF(fmWaveform(t));
 
     std::cout << wf;
 
