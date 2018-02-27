@@ -31,7 +31,6 @@
 
 ![](./timbre.svg)
 
-
 ## Analysing Timbre
 
 $$g(t) = a_0/2 + \sum^{\infty}_{n=1} a_n \cos(2n\pi f t) + \sum^{\infty}_{n=1} b_n \sin(2n\pi f t)$$
@@ -47,6 +46,8 @@ $$g(t) = \sin(2 \cdot 5\pi t) + \frac{1}{2} \sin(2 \cdot 14\pi t)$$
 ## Volume
 
 ![](./ADSR.jpg)
+
+<http://www.daviddarling.info/encyclopedia_of_music/A/ADSR.html>
 
 # Types of Synthesis
 
@@ -65,8 +66,6 @@ $$g(t) = \sin(2 \cdot 5\pi t) + \frac{1}{2} \sin(2 \cdot 14\pi t)$$
 Using mathematical models to emulate a sound, such as a bowed instrument
 
 <video class="stretch" data-autoplay loop src="./5_glissando.mp4"></video>
-
-<http://www.ness.music.ed.ac.uk/>
 
 . . .
 
@@ -96,7 +95,6 @@ and a nonlinear model
 
 ##
 
-<http://www.ams.org/publicoutreach/feature-column/fcarc-synthesizer>
 
 ![](./fcarc-march2009-gstring.gif)
 
@@ -235,8 +233,14 @@ $$y_n = f_cx_n + (1-f_c)y_{n-1}$$
 
 ![](./freq_response_low_pass_recursive_analytical.png)
 
-## ASDR
+## ADSR
 
 ![](./ADSR.jpg)
 
 # Conclusion
+
+# Attribution
+
+- Physically based synthesis materials from [NESS](http://www.ness.music.ed.ac.uk/)
+- Additive and frequency modulated synthesis materials from [AMS](http://www.ams.org/publicoutreach/feature-column/fcarc-synthesizer)
+- Ideal lowpass graphic from [Introduction to Digital Filters](https://ccrma.stanford.edu/~jos/filters/filters.html)
